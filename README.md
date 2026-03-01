@@ -1,0 +1,24 @@
+# DSA-TASK-Assignment-Niraj
+# Introduction
+
+Welcome to the **DSA Practice Repository**!
+
+This repository is dedicated to daily **Data Structures and Algorithms (DSA)** problem assignments. It is designed to help juniors enhance their problem-solving skills and strengthen their understanding of core DSA concepts.
+
+## Purpose
+- To provide a structured approach to practicing DSA problems.
+- To encourage consistent learning and improvement.
+- To prepare for technical interviews and coding challenges.
+
+## How to Use
+1. Navigate to the respective folders for daily assignments.
+2. Solve the problems provided in each assignment.
+3. Submit your solutions as per the guidelines.
+
+## Contribution
+Feel free to contribute by:
+- Adding new problems.
+- Suggesting improvements to existing solutions.
+- Sharing your insights and approaches.
+
+Happy Coding!
