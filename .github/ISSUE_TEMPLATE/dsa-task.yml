@@ -1,0 +1,94 @@
+name: "DSA Task Assignment."
+description: "Create a new DSA problem issue."
+title: "DSA Practice – <Problem Title Here>"
+labels: ["DSA"]
+assignees: []
+
+body:
+  - type: input
+    id: problem_title
+    attributes:
+      label: 🏷 Problem Title
+      placeholder: e.g., Search an Element in an Array
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: 📖 Problem Statement
+      description: Describe the problem clearly.
+      placeholder: |
+        Given an array arr[] of size N and an element X, determine whether X exists in the array.
+
+        If the element is found, return its index (0-based indexing).
+        If not found, return -1.
+    validations:
+      required: true
+
+  - type: input
+    id: problem_link
+    attributes:
+      label: 🔗 Problem Link
+      placeholder: Paste the problem URL here
+    validations:
+      required: false
+
+  - type: textarea
+    id: input_format
+    attributes:
+      label: 📥 Input Format
+      placeholder: |
+        First line: Integer N
+        Second line: N space-separated integers
+        Third line: Integer X
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_output
+    attributes:
+      label: 📤 Expected Output
+      placeholder: |
+        Return index of X if found
+        Return -1 if not found
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: 🧪 Example
+      placeholder: |
+        Input:
+        5
+        1 2 3 4 5
+        3
+
+        Output:
+        2
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: 🎯 Requirements
+      placeholder: |
+        - Use a loop
+        - Do NOT use built-in functions
+        - Implement using a function/method
+        - Mention time and space complexity
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Submission Checklist
+      options:
+        - label: I have created a new branch for this task.
+        - label: I have implemented the solution using a function/method.
+        - label: I have added comments explaining the logic.
+        - label: I have tested with custom test cases.
+        - label: I have mentioned time and space complexity.
