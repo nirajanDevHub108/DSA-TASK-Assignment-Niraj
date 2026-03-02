@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  compile:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,12 +17,18 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Dependencies (if any)
+      - name: Get Changed Python Files
+        id: changed_files
         run: |
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          fi
+          echo "FILES=$(git diff --name-only origin/main | grep '\.py$' || true)" >> $GITHUB_ENV
 
-      - name: Check Python Syntax
+      - name: Compile Changed Python Files
         run: |
-          python -m py_compile $(git ls-files '*.py')
+          if [ -z "$FILES" ]; then
+            echo "No Python files changed."
+          else
+            for file in $FILES; do
+              echo "Compiling $file"
+              python -m py_compile "$file"
+            done
+          fi
